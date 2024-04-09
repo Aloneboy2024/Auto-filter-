@@ -29,7 +29,7 @@ VRFIED_IMG = environ.get("VRFIED_IMG", "https://graph.org/file/4862028cec606c92f
 VRFY_IMG = environ.get("VRFY_IMG", "https://graph.org/file/4862028cec606c92f4221.jpg")
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1842325240').split()]
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002024771917').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '0').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
